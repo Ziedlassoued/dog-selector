@@ -11,12 +11,12 @@ async function mainApp() {
     },
     [
       createElement('h1', {
-        textContent: 'Dogs Random Selector',
+        textContent: 'Dogs Selector',
       }),
     ]
   );
 
-  const response = await fetch('https://dog.ceo/api/breed/hound/images');
+  const response = await fetch('https://dog.ceo/api/breed/hound/images ');
   const body = await response.json();
   const breeds = body.message;
   console.log(breeds);
