@@ -1,8 +1,47 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;1,300&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --color-primary: #e1dcd9;
+  --color-header-text: #e1dcd9;
+  --color-main-text: #32435f;
+  --color-background-header: #a67f78;
+  --color-background-main: #e1dcd9;
+
+  /* FONT */
+  --font-family: 'Karla', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  background-color: var(--color-background-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-family);
+}
+
+.header {
+  background-color: var(--color-background-header);
+  color: var(--color-header-text);
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 4rem 2rem;
+}
+
+.main {
+  display: grid;
+  background-color: var(--color-background-main);
+  color: var(--color-main-text);
+  padding: 2rem 2rem;
 }
