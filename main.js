@@ -1,7 +1,8 @@
 import { createElement } from './lib/element';
 import './style.css';
+import createDogCard from './components/dogCard';
 
-function mainApp() {
+async function mainApp() {
   const appElement = document.querySelector('#app');
   const headerElement = createElement(
     'header',
@@ -15,16 +16,18 @@ function mainApp() {
     ]
   );
 
+  const response = await fetch('https://dog.ceo/api/breed/hound/images');
+  const body = await response.json();
+  const breeds = body.message;
+  console.log(breeds);
+  const dogCards = breeds.map((image) => createDogCard(image));
+
   const mainElement = createElement(
     'main',
     {
       className: 'main',
     },
-    [
-      createElement('p', {
-        textContent: 'Please wait...',
-      }),
-    ]
+    dogCards
   );
 
   appElement.append(headerElement, mainElement);
