@@ -9,10 +9,10 @@
 :root {
   /* COLORS */
   --color-primary: #e1dcd9;
-  --color-header-text: #32435f;
-  --color-main-text: black;
-  --color-background-header: #8f8681;
-  --color-background-main: #a67f78;
+  --color-header-text: #e1dcd9;
+  --color-main-text: #32435f;
+  --color-background-header: #a67f78;
+  --color-background-main: #e1dcd9;
 
   /* FONT */
   --font-family: 'Karla', sans-serif;
@@ -40,9 +40,8 @@ h5 {
 }
 
 .main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   background-color: var(--color-background-main);
   color: var(--color-main-text);
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 }
